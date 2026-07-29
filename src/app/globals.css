@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   SureProcure Design Tokens — official brand palette
+   ------------------------------------------------------------------ */
+:root {
+  --color-primary: #0b1f3a;      /* brand navy */
+  --color-primary-light: #132a4d;
+  --color-secondary: #f2f4f7;    /* brand light grey */
+  --color-accent: #c79a3b;       /* brand gold */
+  --color-accent-light: #d9b969;
+  --color-accent-tint: #f7f0e0;  /* light tint of gold, for backgrounds */
+  --color-grey: #5e6773;         /* brand grey */
+  --color-text-primary: #1a1f29;
+  --color-text-secondary: #5e6773;
+  --color-border: #e2e5ea;
+  --color-on-dark: #f2f4f7;
+  --color-error: #a94438;
+
+  --radius-default: 4px;
+  --radius-card: 8px;
+  --radius-media: 12px;
+
+  --shadow-hover: 0 4px 16px rgba(11, 31, 58, 0.08);
+  --shadow-lift: 0 12px 32px rgba(11, 31, 58, 0.12);
+
+  --font-heading: var(--font-manrope), -apple-system, sans-serif;
+  --font-body: var(--font-inter), -apple-system, sans-serif;
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-primary-light: var(--color-primary-light);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-accent-light: var(--color-accent-light);
+  --color-accent-tint: var(--color-accent-tint);
+  --color-grey: var(--color-grey);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-border: var(--color-border);
+  --color-on-dark: var(--color-on-dark);
+  --color-error: var(--color-error);
+
+  --radius-default: var(--radius-default);
+  --radius-card: var(--radius-card);
+  --radius-media: var(--radius-media);
+
+  --shadow-hover: var(--shadow-hover);
+  --shadow-lift: var(--shadow-lift);
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+}
+
+body {
+  background: var(--color-secondary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+  }
+}
+
+.accent-italic {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* Nav underline micro-interaction */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1.5px;
+  background: var(--color-accent);
+  transition: width 0.2s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
