@@ -199,12 +199,12 @@ export default function Home() {
                 Founder
               </p>
               <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-semibold text-white md:text-4xl">
-                Tolu-Lope James Agibuye
+                Tolulope James Ajiboye
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-5 max-w-lg text-[var(--color-border)]">
-                Tolu-Lope founded SureProcure after building procurement
+                Mr. Ajiboye founded SureProcure after building procurement
                 infrastructure across Transport for London, the NHS, Public
                 Health England, and Curo Group — experience that shaped one
                 conviction: procurement should have one owner, not a dozen.
